@@ -1,287 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexcent landing page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexcent landing page</title>
+
+  <!-- Bootstrap 4.5 CSS -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+  
+  </style>
 </head>
+
 <body>
-    
-    <header>
-        <div class="container">
-            <div class="row align-items-center">
-              <!-- Logo Column -->
-              <div class="col-auto">
-                <img src="Logo.svg" alt="Logo" class="logo-img">
-              </div>
-      
-              <!-- Spacer Column -->
-              <div class="col-1"></div>
-      
-              <div class="col">
-                <div class="d-flex justify-content-between align-items-center">
-                  <ul class="nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Community</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Feature</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                  </ul>
-                <a href="#" class="btn custom-green">Register Now <img src="whitearrow.svg" alt=""></a>
-              </div>
-              </div>
-            </div>
-          </div>
-    </header>
 
-    <body>
-              <!-- Hero Section -->
-      <div class="hero-section">
-        <div class="container">
-          <div class="row align-items-center">
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="Logo.svg" alt="Logo" class="logo-img">
+        </a>
 
-            <!-- Left Side Content -->
-            <div class="col-md-6">
-              <h1 class="hero-title">Lessons and Insights</h1>
-              <h2 class="hero-subtitle">From eight years</h2>
-              <p class="hero-description">
-                Where you want to grow your business as a photographer: site or social media?
-              </p>
-              <a href="#" class="btn register-btn">Register</a>
-            </div>
+        <!-- Hamburger Right -->
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarItems"
+          aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- Right Side Image -->
-            <div class="col-md-6 text-center">
-              <img src="hero.svg" alt="Hero Image" class="hero-img">
-            </div>
+        <!-- Nav Items -->
+        <div class="collapse navbar-collapse" id="navbarItems">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Feature</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+          </ul>
+          <a href="#" class="btn custom-green ml-md-3">Register Now <img src="whitearrow.svg" alt=""></a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-          </div>
-
-          <!-- Loading Dots -->
-          <div class="loading-dots mt-5">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          
-          <!-- Clients Section -->
-<section class="clients-section py-5 text-center bg-white">
+  <!-- Hero Section -->
+  <div class="hero-section">
     <div class="container">
-      <!-- Title -->
-      <h2 class="mb-3 fw-bold">Our Clients</h2>
-  
-      <!-- Subtitle -->
-      <p class="mb-5 text-muted">We have been working with 500+ Fortune clients.</p>
-  
-      <!-- Logos Row -->
-      <div class="row justify-content-center align-items-center g-4">
-        <!-- Icon 1 -->
-        <div class="col-4 col-md-2">
-          <img src="client1coloured.svg" alt="Client 1" class="img-fluid grayscale-icon">
+      <div class="row align-items-center">
+        <!-- Left Side Content -->
+        <div class="col-md-6">
+          <h1 class="hero-title">Lessons and Insights</h1>
+          <h2 class="hero-subtitle">From eight years</h2>
+          <p class="hero-description">
+            Where you want to grow your business as a photographer: site or social media?
+          </p>
+          <a href="#" class="btn register-btn">Register</a>
         </div>
-  
-        <!-- Icon 2 -->
-        <div class="col-4 col-md-2">
-          <img src="client2.svg" alt="Client 2" class="img-fluid grayscale-icon">
+
+        <!-- Right Side Image -->
+        <div class="col-md-6 text-center">
+          <img src="hero.svg" alt="Hero Image" class="hero-img">
         </div>
-  
-        <!-- Icon 3 -->
-        <div class="col-4 col-md-2">
-          <img src="client3.svg" alt="Client 3" class="img-fluid grayscale-icon">
+      </div>
+
+      <!-- Loading Dots -->
+      <div class="loading-dots mt-5">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Clients Section -->
+      <section class="clients-section py-5 text-center bg-white">
+        <div class="container">
+          <h2 class="mb-3 fw-bold">Our Clients</h2>
+          <p class="mb-5 text-muted">We have been working with 500+ Fortune clients.</p>
+          <div class="row justify-content-center align-items-center g-4">
+            <div class="col-4 col-md-2"><img src="client1coloured.svg" class="img-fluid grayscale-icon"></div>
+            <div class="col-4 col-md-2"><img src="client2.svg" class="img-fluid grayscale-icon"></div>
+            <div class="col-4 col-md-2"><img src="client3.svg" class="img-fluid grayscale-icon"></div>
+            <div class="col-4 col-md-2"><img src="client4.svg" class="img-fluid grayscale-icon"></div>
+            <div class="col-4 col-md-2"><img src="client5.svg" class="img-fluid grayscale-icon"></div>
+            <div class="col-4 col-md-2"><img src="client6.svg" class="img-fluid grayscale-icon"></div>
+            <div class="col-4 col-md-2"><img src="client7.svg" class="img-fluid grayscale-icon"></div>
+          </div>
         </div>
-  
-        <!-- Icon 4 -->
-        <div class="col-4 col-md-2">
-          <img src="client4.svg" alt="Client 4" class="img-fluid grayscale-icon">
+      </section>
+    </div>
+  </div>
+
+  <!-- Manage Community -->
+  <section class="manage-community text-center">
+    <div class="container">
+      <h2 class="mb-3">Manage your entire community<br>in a single system</h2>
+      <p class="mb-5">Who is Nexcent suitable for?</p>
+      <div class="row justify-content-around">
+        <div class="col-md-3">
+          <div class="card">
+            <img src="members.svg" class="mx-auto mb-3" alt="icon">
+            <h5>Membership Organisation</h5>
+            <p>Our membership management software provides full automation of membership renewals and payments.</p>
+          </div>
         </div>
-  
-        <!-- Icon 5 -->
-        <div class="col-4 col-md-2">
-          <img src="client5.svg" alt="Client 5" class="img-fluid grayscale-icon">
+        <div class="col-md-3">
+          <div class="card">
+            <img src="associations.svg" class="mx-auto mb-3" alt="icon">
+            <h5>National Associations</h5>
+            <p>Our membership management software provides full automation of membership renewals and payments.</p>
+          </div>
         </div>
-  
-        <!-- Icon 6 -->
-        <div class="col-4 col-md-2">
-          <img src="client6.svg" alt="Client 6" class="img-fluid grayscale-icon">
+        <div class="col-md-3">
+          <div class="card">
+            <img src="clubs.svg" class="mx-auto mb-3" alt="icon">
+            <h5>Clubs and Groups</h5>
+            <p>Our membership management software provides full automation of membership renewals and payments.</p>
+          </div>
         </div>
-  
-        <!-- Icon 7 -->
-        <div class="col-4 col-md-2">
-          <img src="client7.svg" alt="Client 7" class="img-fluid grayscale-icon">
-        </div>
-        
       </div>
     </div>
   </section>
-  
-        </div>
-      </div>
 
+  <!-- Pixelgrade -->
+  <div class="container pixelgrade my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6"><img src="mobile1.svg" alt="Pixelgrade Image" class="img-fluid"></div>
+      <div class="col-md-6">
+        <h2 class="mb-3">The unseen of spreading three <br>years of pixellab</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+        <a href="#" class="btn btn-primary mt-3 btn custom-green">Learn More</a>
+      </div>
     </div>
   </div>
-        </div>
 
-        <!-- ----manage community---- -->
-            <section class="manage-community text-center">
-                <div class="container">
-                  <h2 class="mb-3">Manage your entire community<br>in a single system</h2>
-                  <p class="mb-5">Who is Nexcent suitable for?</p>
-                  <div class="row justify-content-around">
-                    <div class="col-md-3">
-                      <div class="card">
-                        <img src="members.svg" class="mx-auto mb-3" alt="icon">
-                        <h5>Membership Organisation</h5>
-                        <p>Our membership management software provides full automation of membership renewals and payments.</p>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="card">
-                        <img src="associations.svg" class="mx-auto mb-3" alt="icon">
-                        <h5>National Associations</h5>
-                        <p>Our membership management software provides full automation of membership renewals and payments.</p>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="card">
-                        <img src="clubs.svg" class="mx-auto mb-3" alt="icon">
-                        <h5>Clubs and Groups</h5>
-                        <p>Our membership management software provides full automation of membership renewals and payments.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-
-            <!-- Pixelgrade -->
-            <div class="container pixelgrade my-5">
-                <div class="row align-items-center">
-                  <!-- Left Side Image -->
-                  <div class="col-md-6">
-                    <img src="mobile1.svg" alt="Pixelgrade Image" class="img-fluid">
-                  </div>
-              
-                  <!-- Right Side Content -->
-                  <div class="col-md-6">
-                    <h2 class="mb-3">The unseen of spreading three <br>years of pixellab</h2>
-                    <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis laboriosam repellat provident obcaecati optio cupiditate nesciunt aut, quia harum ipsum, aspernatur nostrum quidem facilis earum repudiandae ab accusamus officia, ducimus enim. Veniam quam debitis quidem. Ipsum atque asperiores, officia, alias incidunt tempora consequuntur aperiam, doloremque unde dolor quibusdam nisi autem!
-                    </p>
-                    <a href="#" class="btn btn-primary mt-3  btn custom-green">Learn More</a>
-                  </div>
-                </div>
-              </div>
-              
-
-<!-- Caring is the new marketing Section -->
-<div class="container my-5">
-
-    <!-- Heading and paragraph -->
+  <!-- Caring Section -->
+  <div class="container my-5">
     <div class="text-center mb-5">
       <h2 class="fw-bold">Caring is the new marketing</h2>
-      <p class="text-muted">
-        The Nexcent blog is the best place to read about the latest membership insights, trends and more. <br>
-        See who’s joining the community, read about how our community are increasing their membership income and lot’s more.
-      </p>
+      <p class="text-muted">The Nexcent blog is the best place to read about...</p>
     </div>
-  
-    <!-- 3 Images in a Row with Boxes -->
-    <div class="row g-4">
-  
-      <!-- Image 1 -->
-      <div class="col-md-4">
-        <div class="position-relative">
-          <img src="marketing (3).svg" class="img-fluid rounded" alt="Image 1">
-  
-          <!-- Box over image -->
-          <div class="position-absolute bg-white shadow rounded px-3 py-2"
-               style="bottom: 20px; left: 15px; right: 15px;">
-            <p class="fw-bold mb-0">
-              Creating Streamlined Safeguarding Processes with OneRen
-            </p>
-            <a href="#"  style="color: green; justify-content: center; align-items: center; text-decoration: none; text-align: center;">Read More <img src="greenarrowright.svg" alt=""></a>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Image 2 -->
-      <div class="col-md-4">
-        <div class="position-relative">
-          <img src="marketing (2).svg" class="img-fluid rounded" alt="Image 2">
-  
-          <!-- Box over image -->
-          <div class="position-absolute bg-white shadow rounded px-3 py-2"
-               style="bottom: 20px; left: 15px; right: 10px;">
-            <p class="fw-bold mb-0">
-              What are your safeguarding responsibilities <br> and how can you manage them?
-            </p>
-            <a href="#"  style="color: green; justify-content: center; text-decoration: none; align-items: center;">Read More <img src="greenarrowright.svg" alt=""></a>
 
-          </div>
-        </div>
-      </div>
-  
-      <!-- Image 3 -->
+    <div class="row g-4">
       <div class="col-md-4">
         <div class="position-relative">
-          <img src="marketing (1).svg" class="img-fluid rounded" alt="Image 3">
-  
-          <!-- Box over image -->
-          <div class="position-absolute bg-white shadow rounded px-3 py-2"
-               style="bottom: 20px; left: 15px; right: 15px;">
-            <p class="fw-bold mb-0">
-              Revamping the Membership Model with Triathlon Australia
-            </p>
-            <a href="#" style=" text-decoration: none; color:  green; justify-content: center; align-items: center;">Read More <img src="greenarrowright.svg" alt=""></a>
+          <img src="marketing (3).svg" class="img-fluid rounded">
+          <div class="position-absolute bg-white shadow rounded px-3 py-2" style="bottom:20px;left:15px;right:15px;">
+            <p class="fw-bold mb-0">Creating Streamlined Safeguarding Processes with OneRen</p>
+            <a href="#" style="color: green;text-decoration: none;">Read More <img src="greenarrowright.svg"></a>
           </div>
         </div>
       </div>
-  
+      <div class="col-md-4">
+        <div class="position-relative">
+          <img src="marketing (2).svg" class="img-fluid rounded">
+          <div class="position-absolute bg-white shadow rounded px-3 py-2" style="bottom:20px;left:15px;right:10px;">
+            <p class="fw-bold mb-0">What are your safeguarding responsibilities...</p>
+            <a href="#" style="color: green;text-decoration: none;">Read More <img src="greenarrowright.svg"></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="position-relative">
+          <img src="marketing (1).svg" class="img-fluid rounded">
+          <div class="position-absolute bg-white shadow rounded px-3 py-2" style="bottom:20px;left:15px;right:15px;">
+            <p class="fw-bold mb-0">Revamping the Membership Model with Triathlon Australia</p>
+            <a href="#" style="color: green;text-decoration: none;">Read More <img src="greenarrowright.svg"></a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
-  
-    <!-- Custom Green Section -->
-<div style="text-align: center;">
 
-    <!-- Heading -->
-    <h1 style="font-weight: bold; margin-bottom: 20px;">
-        Pellentesque suscipit <br> fringills libero eu.
-    </h1>
+  <!-- Demo Section -->
+  <div style="text-align: center;">
+    <h1 style="font-weight: bold; margin-bottom: 20px;">Pellentesque suscipit <br> fringills libero eu.</h1>
+    <a href="#" style="background-color: #28a745; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Get a demo <img src="whitearrow.svg"></a>
+  </div>
 
-    <a href="#" style="display: inline; background-color: #28a745; color: #fff; text-decoration: none; width: 10px;">Get a demo <img src="whitearrow.svg" alt=""></a>
-</div>
-
-<!-- Footer Section -->
-<footer style="background-color: #1D1E25; color: #fff; padding: 60px 0;">
+  <!-- Footer -->
+  <footer style="background-color: #1D1E25; color: #fff; padding: 60px 0;">
     <div class="container">
       <div class="row">
-  
-        <!-- Column 1: Logo + Paragraph -->
         <div class="col-md-3 mb-4" style="font-size: larger;">
-          <img src="logodark.svg" alt="Logo" style="width: 50px; margin-bottom: 20px;">Nexcent
-          <p>
-         Copyright   &copy; 2020 landify UI kit <br> All rights reserved.
-          </p>
-          <img src="instagram.svg" alt="">
-          <img src="ball.svg" alt="">
-          <img src="twitter.svg" alt="">
-          <img src="youtube.svg" alt="">
+          <img src="logodark.svg" style="width: 50px; margin-bottom: 20px;"> Nexcent
+          <p>Copyright &copy; 2020 landify UI kit <br> All rights reserved.</p>
+          <img src="instagram.svg"> <img src="ball.svg"> <img src="twitter.svg"> <img src="youtube.svg">
         </div>
-  
-        <!-- Column 2: Company Links -->
         <div class="col-md-3 mb-4">
           <h5>Company</h5>
           <ul class="list-unstyled mt-3">
@@ -292,8 +200,6 @@
             <li><a href="#" style="color: #ccc; text-decoration: none;">Testimonials</a></li>
           </ul>
         </div>
-  
-        <!-- Column 3: Support Links -->
         <div class="col-md-3 mb-4">
           <h5>Support</h5>
           <ul class="list-unstyled mt-3">
@@ -304,15 +210,19 @@
             <li><a href="#" style="color: #ccc; text-decoration: none;">Status</a></li>
           </ul>
         </div>
-  
-        <!-- Column 4: Stay up to date -->
         <div class="col-md-3 mb-4">
           <h5>Stay up to date</h5>
           <form class="mt-3">
-            <input type="email" class="form-control mb-3" placeholder="Your email address " style="background-color: gray;padding: 12px; border-radius: 6px; border: no"
-            >
-            
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
-            </html>
+            <input type="email" class="form-control mb-3" placeholder="Your email address" style="background-color: gray; padding: 12px; border-radius: 6px;">
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
