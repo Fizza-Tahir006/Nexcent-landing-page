@@ -3,120 +3,322 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nexcent landing page</title>
+  <title>Nexcent Landing Page</title>
 
-  <!-- Bootstrap 4.5 CSS -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-  
+   /* -------------------------
+   Global Styles
+------------------------- */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+/* Reset images for responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent horizontal scrolling globally */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* -------------------------
+   Navbar
+------------------------- */
+.navbar {
+  padding: 10px 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand img {
+  max-height: 40px;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 10px;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #333 !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+}
+
+/* -------------------------
+   Hero Section
+------------------------- */
+.hero {
+  padding: 60px 15px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+color: rgb(12, 11, 11);
+}
+.hero h2{
+  color: green;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 0.9rem;
+  margin-top: 15px;
+  color: #555;
+}
+
+.hero .btn {
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+/* -------------------------
+   Clients Section
+------------------------- */
+.clients {
+  padding: 50px 15px;
+  text-align: center;
+}
+
+.clients h2 {
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.clients img {
+  max-width: 120px;
+  margin: 15px auto;
+  transition: transform 0.3s ease;
+}
+
+.clients img:hover {
+  transform: scale(1.05);
+}
+
+/* -------------------------
+   Cards Section (Manage Community)
+------------------------- */
+.card {
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  max-width: 80px;
+  margin: 0 auto;
+}
+
+/* -------------------------
+   Caring Section
+------------------------- */
+.card.border-0.shadow-sm {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: #222;
+}
+
+.card-body a {
+  color: #28a745;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card-body a:hover {
+  text-decoration: underline;
+}
+
+/* -------------------------
+   Footer
+------------------------- */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 15px;
+}
+
+footer h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+footer ul li {
+  margin-bottom: 8px;
+}
+
+footer ul li a {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #fff;
+}
+
+footer input {
+  max-width: 100%;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* -------------------------
+   Responsive Fixes
+------------------------- */
+
+/* Mobile Screens */
+@media (max-width: 576px) {
+  /* Remove Bootstrap negative margins */
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Clients section images adjust */
+  .clients .row > [class*="col-"] {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  /* Hero text center align */
+  .hero {
+    text-align: center;
+  }
+
+  /* Hero heading size */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Cards padding reduce */
+  .card {
+    padding: 15px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+  .clients .row > [class*="col-"] {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+
+
   </style>
 </head>
-
 <body>
 
-  <!-- Header / Navbar -->
-  <header>
-    <nav class="navbar navbar-expand-md">
-      <div class="container">
-        <!-- Logo -->
-        <a class="navbar-brand" href="#">
-          <img src="Logo.svg" alt="Logo" class="logo-img">
-        </a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#"><img src="Images/Logo.svg" alt="Nexcent"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+      <a href="#" class="btn btn-success">Register Now </a>
 
-        <!-- Hamburger Right -->
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarItems"
-          aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Nav Items -->
-        <div class="collapse navbar-collapse" id="navbarItems">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Feature</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-          </ul>
-          <a href="#" class="btn custom-green ml-md-3">Register Now <img src="whitearrow.svg" alt=""></a>
-        </div>
-      </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
-  <div class="hero-section">
+  <section class="hero">
     <div class="container">
       <div class="row align-items-center">
-        <!-- Left Side Content -->
         <div class="col-md-6">
-          <h1 class="hero-title">Lessons and Insights</h1>
-          <h2 class="hero-subtitle">From eight years</h2>
-          <p class="hero-description">
-            Where you want to grow your business as a photographer: site or social media?
-          </p>
-          <a href="#" class="btn register-btn">Register</a>
+          <h1>Lessons and Insights</h1>
+          <h2>from eight years</h2>
+          <p>Where to grow your buisness as a photographer: site or social media?</p>
+          <a href="#" class="btn btn-success">Register Now </a>
         </div>
-
-        <!-- Right Side Image -->
-        <div class="col-md-6 text-center">
-          <img src="hero.svg" alt="Hero Image" class="hero-img">
+        <div class="col-md-6">
+          <img src="Images\hero.svg" alt="Hero Image">
         </div>
       </div>
-
-      <!-- Loading Dots -->
-      <div class="loading-dots mt-5">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <!-- Clients Section -->
-      <section class="clients-section py-5 text-center bg-white">
-        <div class="container">
-          <h2 class="mb-3 fw-bold">Our Clients</h2>
-          <p class="mb-5 text-muted">We have been working with 500+ Fortune clients.</p>
-          <div class="row justify-content-center align-items-center g-4">
-            <div class="col-4 col-md-2"><img src="client1coloured.svg" class="img-fluid grayscale-icon"></div>
-            <div class="col-4 col-md-2"><img src="client2.svg" class="img-fluid grayscale-icon"></div>
-            <div class="col-4 col-md-2"><img src="client3.svg" class="img-fluid grayscale-icon"></div>
-            <div class="col-4 col-md-2"><img src="client4.svg" class="img-fluid grayscale-icon"></div>
-            <div class="col-4 col-md-2"><img src="client5.svg" class="img-fluid grayscale-icon"></div>
-            <div class="col-4 col-md-2"><img src="client6.svg" class="img-fluid grayscale-icon"></div>
-            <div class="col-4 col-md-2"><img src="client7.svg" class="img-fluid grayscale-icon"></div>
-          </div>
-        </div>
-      </section>
     </div>
-  </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section class="clients text-center">
+    <div class="container">
+      <h2>Our Clients</h2>
+      <p>We have been working with some fortune 500+ clients</p>
+      <div class="row justify-content-center">
+        <div class="col-4 col-md-2"><img src="Images\client1.svg" alt="Client 1"></div>
+        <div class="col-4 col-md-2"><img src="Images\client2.svg" alt="Client 2"></div>
+        <div class="col-4 col-md-2"><img src="Images\client3.svg" alt="Client 3"></div>
+        <div class="col-4 col-md-2"><img src="Images\client4.svg" alt="Client 4"></div>
+        <div class="col-4 col-md-2"><img src="Images\client5.svg" alt="Client 5"></div>
+      </div>
+    </div>
+  </section>
 
   <!-- Manage Community -->
-  <section class="manage-community text-center">
+  <section class="py-5 text-center">
     <div class="container">
       <h2 class="mb-3">Manage your entire community<br>in a single system</h2>
       <p class="mb-5">Who is Nexcent suitable for?</p>
-      <div class="row justify-content-around">
-        <div class="col-md-3">
-          <div class="card">
-            <img src="members.svg" class="mx-auto mb-3" alt="icon">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 p-3">
+            <img src="Images/members.svg" class="img-fluid mb-3 mx-auto" alt="">
             <h5>Membership Organisation</h5>
             <p>Our membership management software provides full automation of membership renewals and payments.</p>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img src="associations.svg" class="mx-auto mb-3" alt="icon">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 p-3">
+            <img src="Images/associations.svg" class="img-fluid mb-3 mx-auto" alt="">
             <h5>National Associations</h5>
             <p>Our membership management software provides full automation of membership renewals and payments.</p>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img src="clubs.svg" class="mx-auto mb-3" alt="icon">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 p-3">
+            <img src="Images/clubs.svg" class="img-fluid mb-3 mx-auto" alt="">
             <h5>Clubs and Groups</h5>
             <p>Our membership management software provides full automation of membership renewals and payments.</p>
           </div>
@@ -126,103 +328,112 @@
   </section>
 
   <!-- Pixelgrade -->
-  <div class="container pixelgrade my-5">
-    <div class="row align-items-center">
-      <div class="col-md-6"><img src="mobile1.svg" alt="Pixelgrade Image" class="img-fluid"></div>
-      <div class="col-md-6">
-        <h2 class="mb-3">The unseen of spreading three <br>years of pixellab</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
-        <a href="#" class="btn btn-primary mt-3 btn custom-green">Learn More</a>
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0"><img src="Images/mobile1.svg" alt="Pixelgrade" class="img-fluid"></div>
+        <div class="col-md-6">
+          <h2 class="mb-3">The unseen of spreading three <br>years of pixellab</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sunt. Molestiae ullam ducimus explicabo! Minima sed incidunt ex, magni dolor quae mollitia aliquam voluptatem at in, blanditiis vitae sequi tenetur.</p>
+          <a href="#" class="btn btn-success">Learn More</a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Caring Section -->
-  <div class="container my-5">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Caring is the new marketing</h2>
+  <section class="py-5 bg-light">
+    <div class="container text-center mb-5">
+      <h2 class="font-weight-bold">Caring is the new marketing</h2>
       <p class="text-muted">The Nexcent blog is the best place to read about...</p>
     </div>
 
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="position-relative">
-          <img src="marketing (3).svg" class="img-fluid rounded">
-          <div class="position-absolute bg-white shadow rounded px-3 py-2" style="bottom:20px;left:15px;right:15px;">
-            <p class="fw-bold mb-0">Creating Streamlined Safeguarding Processes with OneRen</p>
-            <a href="#" style="color: green;text-decoration: none;">Read More <img src="greenarrowright.svg"></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 shadow-sm">
+            <img src="Images/marketing (3).svg" class="card-img-top" alt="">
+            <div class="card-body">
+              <p class="font-weight-bold">Creating Streamlined Safeguarding Processes with OneRen</p>
+              <a href="#" class="text-success">Read More</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="position-relative">
-          <img src="marketing (2).svg" class="img-fluid rounded">
-          <div class="position-absolute bg-white shadow rounded px-3 py-2" style="bottom:20px;left:15px;right:10px;">
-            <p class="fw-bold mb-0">What are your safeguarding responsibilities...</p>
-            <a href="#" style="color: green;text-decoration: none;">Read More <img src="greenarrowright.svg"></a>
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 shadow-sm">
+            <img src="Images/marketing (2).svg" class="card-img-top" alt="">
+            <div class="card-body">
+              <p class="font-weight-bold">What are your safeguarding responsibilities...</p>
+              <a href="#" class="text-success">Read More</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="position-relative">
-          <img src="marketing (1).svg" class="img-fluid rounded">
-          <div class="position-absolute bg-white shadow rounded px-3 py-2" style="bottom:20px;left:15px;right:15px;">
-            <p class="fw-bold mb-0">Revamping the Membership Model with Triathlon Australia</p>
-            <a href="#" style="color: green;text-decoration: none;">Read More <img src="greenarrowright.svg"></a>
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 shadow-sm">
+            <img src="Images/marketing (1).svg" class="card-img-top" alt="">
+            <div class="card-body">
+              <p class="font-weight-bold">Revamping the Membership Model with Triathlon Australia</p>
+              <a href="#" class="text-success">Read More</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Demo Section -->
-  <div style="text-align: center;">
-    <h1 style="font-weight: bold; margin-bottom: 20px;">Pellentesque suscipit <br> fringills libero eu.</h1>
-    <a href="#" style="background-color: #28a745; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px;">Get a demo <img src="whitearrow.svg"></a>
-  </div>
+  <section class="py-5 text-center">
+    <h1 class="font-weight-bold mb-4">Pellentesque suscipit <br> fringills libero eu.</h1>
+    <a href="#" class="btn btn-success">Get a demo <img src="Images/whitearrow.svg" alt=""></a>
+  </section>
 
   <!-- Footer -->
-  <footer style="background-color: #1D1E25; color: #fff; padding: 60px 0;">
+  <footer class="bg-dark text-light py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-3 mb-4" style="font-size: larger;">
-          <img src="logodark.svg" style="width: 50px; margin-bottom: 20px;"> Nexcent
-          <p>Copyright &copy; 2020 landify UI kit <br> All rights reserved.</p>
-          <img src="instagram.svg"> <img src="ball.svg"> <img src="twitter.svg"> <img src="youtube.svg">
+        <div class="col-md-3 mb-4">
+          <img src="Images/logodark.svg" style="width: 50px;" alt=""> 
+          <p class="mt-3">&copy; 2020 Landify UI Kit <br> All rights reserved.</p>
+          <div>
+            <img src="Images/instagram.svg" alt=""> 
+            <img src="Images/ball.svg" alt=""> 
+            <img src="Images/twitter.svg" alt=""> 
+            <img src="Images/youtube.svg" alt="">
+          </div>
         </div>
         <div class="col-md-3 mb-4">
           <h5>Company</h5>
           <ul class="list-unstyled mt-3">
-            <li><a href="#" style="color: #ccc; text-decoration: none;">About us</a></li>
-            <li><a href="#" style="color: #ccc; text-decoration: none;">Blog</a></li>
-            <li><a href="#" style="color: #ccc; text-decoration: none;">Contact us</a></li>
-            <li><a href="#" style="color: #ccc; text-decoration: none;">Pricing</a></li>
-            <li><a href="#" style="color: #ccc; text-decoration: none;">Testimonials</a></li>
+            <li><a href="#" class="text-light">About us</a></li>
+            <li><a href="#" class="text-light">Blog</a></li>
+            <li><a href="#" class="text-light">Contact us</a></li>
+            <li><a href="#" class="text-light">Pricing</a></li>
+            <li><a href="#" class="text-light">Testimonials</a></li>
           </ul>
         </div>
         <div class="col-md-3 mb-4">
           <h5>Support</h5>
           <ul class="list-unstyled mt-3">
-            <li><a href="#" style="color: #ccc; text-decoration: none;">Help center</a></li>
-            <li><a href="#" style="color: #ccc; text-decoration: none;">Terms of service</a></li>
-            <li><a href="#" style="color: #ccc; text-decoration: none;">Legal</a></li>
-            <li><a href="#" style="color: #ccc; text-decoration: none;">Privacy policy</a></li>
-            <li><a href="#" style="color: #ccc; text-decoration: none;">Status</a></li>
+            <li><a href="#" class="text-light">Help center</a></li>
+            <li><a href="#" class="text-light">Terms of service</a></li>
+            <li><a href="#" class="text-light">Legal</a></li>
+            <li><a href="#" class="text-light">Privacy policy</a></li>
+            <li><a href="#" class="text-light">Status</a></li>
           </ul>
         </div>
         <div class="col-md-3 mb-4">
           <h5>Stay up to date</h5>
           <form class="mt-3">
-            <input type="email" class="form-control mb-3" placeholder="Your email address" style="background-color: gray; padding: 12px; border-radius: 6px;">
+            <input type="email" class="form-control bg-dark text-white" placeholder="Your email address">
           </form>
         </div>
       </div>
     </div>
   </footer>
 
+
   <!-- Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
